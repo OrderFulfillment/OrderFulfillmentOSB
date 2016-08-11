@@ -1,0 +1,33 @@
+<wsdl:definitions
+     name="getSoRctL4DbAdapter"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL4/getSoRctL4DbAdapter"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL4/getSoRctL4DbAdapter"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+  <plt:partnerLinkType name="getSoRctL4DbAdapter_plt" >
+    <plt:role name="getSoRctL4DbAdapter_role" >
+      <plt:portType name="tns:getSoRctL4DbAdapter_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+     <schema xmlns="http://www.w3.org/2001/XMLSchema">
+       <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter"
+               schemaLocation="getSoRctL4DbAdapter_sp.xsd" />
+     </schema>
+    </wsdl:types>
+    <wsdl:message name="args_in_msg">
+        <wsdl:part name="InputParameters" element="db:InputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="args_out_msg">
+        <wsdl:part name="OutputParameters" element="db:OutputParameters"/>
+    </wsdl:message>
+    <wsdl:portType name="getSoRctL4DbAdapter_ptt">
+        <wsdl:operation name="getSoRctL4DbAdapter">
+            <wsdl:input message="tns:args_in_msg"/>
+            <wsdl:output message="tns:args_out_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

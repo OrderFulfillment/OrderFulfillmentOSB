@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://xmlns.oracle.com/OrderFulfillmentOSB/GetSoRctL4/getSoRctL4Rest" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="getSoRctL4Rest">RestService</doc>
+   <grammars>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" schemaLocation="getSoRctL4DbAdapter_sp.xsd"/>
+        </xsd:schema>
+   </grammars>
+   <resources>
+      <resource path="/getsorctl4/{hdrId}/{status}/{soOrRct}/{agingOrCount}/{minAging}/{maxAging}">
+         <method name="GET" soa:wsdlOperation="L4Operation2">
+            <request>
+               <param name="hdrId" style="template" soa:expression="$msg.request/db:PI_HEADER_ID" default="" type="xsd:string"/>
+               <param name="status" style="template" soa:expression="$msg.request/db:PI_STATUS" default="" type="xsd:string"/>
+               <param name="soOrRct" style="template" soa:expression="$msg.request/db:PI_SO_OR_RCT" default="" type="xsd:string"/>
+               <param name="agingOrCount" style="template" soa:expression="$msg.request/db:PI_AGING_COUNT" default="" type="xsd:string"/>
+               <param name="minAging" style="template" soa:expression="$msg.request/db:PI_MIN_AGING_VAL" default="" type="xsd:string"/>
+               <param name="maxAging" style="template" soa:expression="$msg.request/db:PI_MAX_AGING_VAL" default="" type="xsd:string"/>
+            </request>
+            <response status="200">
+               <representation mediaType="application/json" element="cns:OutputParameters" xmlns:cns="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://xmlns.oracle.com/OrderFulfillmentOSB/GetSoRctDetailsL1/L1Rest" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="L1Rest">RestService</doc>
+   <grammars>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/L1DbAdapter" schemaLocation="L1DbAdapter_sp.xsd"/>
+        </xsd:schema>
+   </grammars>
+   <resources>
+      <resource path="/getl1count">
+         <method name="GET" soa:wsdlOperation="l1Operation">
+            <request/>
+            <response status="200">
+               <representation mediaType="application/json" element="cns:OutputParameters" xmlns:cns="http://xmlns.oracle.com/pcbpel/adapter/db/sp/L1DbAdapter"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>

@@ -1,0 +1,13 @@
+<adapter-config name="L3dbReference" adapter="db" wsdlLocation="L3dbReference.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/OracleEBSDS"/>
+  <endpoint-interaction portType="L3dbReference_ptt" operation="L3dbReference">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="APPS"/>
+      <property name="PackageName" value="XXMAF_SO_RCPT_PKG"/>
+      <property name="ProcedureName" value="GET_SO_RCT_HEADER_DETAILS_L3"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

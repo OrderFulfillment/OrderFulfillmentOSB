@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL3/L3dbReference" name="L3dbReference-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="L3dbReference.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL3/L3dbReference"/>
+    <wsdl:binding name="L3dbReference_ptt-binding" type="l3d:L3dbReference_ptt" xmlns:l3d="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL3/L3dbReference">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="L3dbReference">
+            <soap:operation soapAction="L3dbReference"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

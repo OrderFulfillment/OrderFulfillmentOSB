@@ -1,0 +1,46 @@
+<wsdl:definitions name="getSoRctL4Rest" targetNamespace="http://xmlns.oracle.com/OrderFulfillmentOSB/GetSoRctL4/getSoRctL4Rest" xmlns:tns="http://xmlns.oracle.com/OrderFulfillmentOSB/GetSoRctL4/getSoRctL4Rest" xmlns:inp1="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <plnk:partnerLinkType name="getSoRctL4Rest">
+        <plnk:role name="getSoRctL4RestProvider" portType="tns:getSoRctL4Rest_ptt"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" schemaLocation="getSoRctL4DbAdapter_sp.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getSoRctL4Operation_inputMessage">
+        <wsdl:part name="request" element="inp1:InputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="getSoRctL4Operation_outputMessage">
+        <wsdl:part name="reply" element="inp1:OutputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="L4Operation1_inputMessage">
+        <wsdl:part name="request" element="inp1:InputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="L4Operation1_outputMessage">
+        <wsdl:part name="reply" element="inp1:OutputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="L4Operation2_inputMessage">
+        <wsdl:part name="request" element="inp1:InputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="L4Operation2_outputMessage">
+        <wsdl:part name="reply" element="inp1:OutputParameters"/>
+    </wsdl:message>
+    <wsdl:portType name="getSoRctL4Rest_ptt">
+        <wsdl:operation name="L4Operation2">
+            <wsdl:input message="tns:L4Operation2_inputMessage"/>
+            <wsdl:output message="tns:L4Operation2_outputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="getSoRctL4Rest_ptt-binding" type="tns:getSoRctL4Rest_ptt">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="L4Operation2">
+            <soap:operation soapAction="L4Operation2"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

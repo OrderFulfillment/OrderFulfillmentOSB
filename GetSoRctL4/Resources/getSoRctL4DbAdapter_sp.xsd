@@ -1,0 +1,61 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/getSoRctL4DbAdapter" elementFormDefault="qualified">
+   <element name="InputParameters">
+      <complexType>
+         <sequence>
+            <element name="PI_HEADER_ID" type="decimal" db:index="1" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="PI_STATUS" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="PI_SO_OR_RCT" type="string" db:index="3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="PI_AGING_COUNT" type="string" db:index="4" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="PI_MIN_AGING_VAL" type="decimal" db:index="5" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="PI_MAX_AGING_VAL" type="decimal" db:index="6" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <element name="OutputParameters">
+      <complexType>
+         <sequence>
+            <element name="PX_LINE_TYPE" type="db:APPS.XXMAF_OFA_LINE_TBL" db:index="7" db:type="Array" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <complexType name="APPS.XXMAF_OFA_LINE_TBL">
+      <sequence>
+         <element name="PX_LINE_TYPE_ITEM" type="db:APPS.XXMAF_OFA_LINE_OBJ" db:type="Struct" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.XXMAF_OFA_LINE_OBJ">
+      <sequence>
+         <element name="DOC_HEADER_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="DOC_LINE_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="DOC_LINE_NUM" type="db:string5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ITEM_NUMBER" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="QUANTITY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="CARRIER" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="WAREHOUSE" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SSD" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="DOCUMENT_TYPE" type="db:string3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="COUNT_OR_AGING" type="db:string3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="AGING_DAYS" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <simpleType name="string5">
+      <restriction base="string">
+         <maxLength value="5"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string240">
+      <restriction base="string">
+         <maxLength value="240"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string50">
+      <restriction base="string">
+         <maxLength value="50"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string3">
+      <restriction base="string">
+         <maxLength value="3"/>
+      </restriction>
+   </simpleType>
+</schema>

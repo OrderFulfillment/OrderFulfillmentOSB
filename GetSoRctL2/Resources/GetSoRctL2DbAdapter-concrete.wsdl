@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL2/GetSoRctL2DbAdapter" name="GetSoRctL2DbAdapter-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="GetSoRctL2DbAdapter.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL2/GetSoRctL2DbAdapter"/>
+    <wsdl:binding name="GetSoRctL2DbAdapter_ptt-binding" type="get:GetSoRctL2DbAdapter_ptt" xmlns:get="http://xmlns.oracle.com/pcbpel/adapter/db/OrderFulfillmentOSB/GetSoRctL2/GetSoRctL2DbAdapter">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="GetSoRctL2DbAdapter">
+            <soap:operation soapAction="GetSoRctL2DbAdapter"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

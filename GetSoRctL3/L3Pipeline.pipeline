@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:coreEntry>
+        <con:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType">
+            <con:wsdl ref="GetSoRctL3/Resources/L3RestService"/>
+            <con:binding>
+                <con:name>L3RestService_ptt-binding</con:name>
+                <con:namespace>http://xmlns.oracle.com/OrderFulfillmentOSB/GetSoRctL3/L3RestService</con:namespace>
+            </con:binding>
+        </con:binding>
+        <con:xqConfiguration>
+            <con:snippetVersion>1.0</con:snippetVersion>
+        </con:xqConfiguration>
+    </con:coreEntry>
+    <con:router>
+        <con:flow>
+            <con:route-node name="RouteNode1" xmlns:con1="http://www.bea.com/wli/sb/stages/routing/config" xmlns:con2="http://www.bea.com/wli/sb/stages/config">
+                <con:context>
+                    <con2:userNsDecl prefix="l3d" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/L3dbReference"/>
+                </con:context>
+                <con:actions>
+                    <con1:route>
+                        <con2:id>_ActionId-N3f57fefc.6c871bb8.0.1565a69232b.N8000</con2:id>
+                        <con1:service ref="GetSoRctL3/L3dbReference" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con1:operation>L3dbReference</con1:operation>
+                        <con1:outboundTransform>
+                            <con3:replace varName="body" contents-only="true" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
+                                <con2:id>_ActionId-N3f57fefc.6c871bb8.0.1565a69232b.N7ffd</con2:id>
+                                <con3:expr>
+                                    <con2:xqueryText><![CDATA[<l3d:InputParameters>
+	<l3d:PI_STATUS>{$body/l3d:InputParameters/l3d:PI_STATUS/text()}</l3d:PI_STATUS>
+	<l3d:PI_CUSTOMER_ID>{$body/l3d:InputParameters/l3d:PI_CUSTOMER_ID/text()}</l3d:PI_CUSTOMER_ID>
+        <l3d:PI_SO_OR_RCT>{$body/l3d:InputParameters/l3d:PI_SO_OR_RCT/text()}</l3d:PI_SO_OR_RCT>
+        <l3d:PI_MIN_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MIN_AGING_VAL/text()}</l3d:PI_MIN_AGING_VAL>
+        <l3d:PI_MIN_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MIN_AGING_VAL/text()}</l3d:PI_MIN_AGING_VAL>
+        <l3d:PI_MAX_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MAX_AGING_VAL/text()}</l3d:PI_MAX_AGING_VAL>
+</l3d:InputParameters>]]></con2:xqueryText>
+                                </con3:expr>
+                            </con3:replace>
+                        </con1:outboundTransform>
+                        <con1:responseTransform/>
+                    </con1:route>
+                </con:actions>
+            </con:route-node>
+        </con:flow>
+    </con:router>
+</con:pipelineEntry>

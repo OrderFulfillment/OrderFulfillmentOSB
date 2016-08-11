@@ -1,0 +1,13 @@
+<adapter-config name="GetSoRctL2DbAdapter" adapter="db" wsdlLocation="GetSoRctL2DbAdapter.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/OracleEBSDS"/>
+  <endpoint-interaction portType="GetSoRctL2DbAdapter_ptt" operation="GetSoRctL2DbAdapter">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="APPS"/>
+      <property name="PackageName" value="XXMAF_SO_RCPT_PKG"/>
+      <property name="ProcedureName" value="GET_SO_RCT_DETAILS_L2"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>
