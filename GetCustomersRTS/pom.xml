@@ -3,19 +3,18 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.oracle.servicebus</groupId>
+        <artifactId>sbar-project-common</artifactId>
+        <version>12.1.3-0-0</version>
+    </parent>
+
     <groupId>ofa</groupId>
-    <artifactId>OrderFulfillmentOSB</artifactId>
+    <artifactId>GetCustomersRTS</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
+    <packaging>sbar</packaging>
 
-    <modules>
-        <module>System</module>
-        <module>GetSoRctL2</module>
-        <module>GetSoRctL3</module>
-        <module>GetSoRctL4</module>
-        <module>GetSoRctDetailsL1</module>
-        <module>GetCustomersRTS</module>
-    </modules>
+    <description/>
 
 </project>

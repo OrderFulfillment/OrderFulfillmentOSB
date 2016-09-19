@@ -31,7 +31,7 @@
 	<l3d:PI_STATUS>{$body/l3d:InputParameters/l3d:PI_STATUS/text()}</l3d:PI_STATUS>
 	<l3d:PI_CUSTOMER_ID>{$body/l3d:InputParameters/l3d:PI_CUSTOMER_ID/text()}</l3d:PI_CUSTOMER_ID>
         <l3d:PI_SO_OR_RCT>{$body/l3d:InputParameters/l3d:PI_SO_OR_RCT/text()}</l3d:PI_SO_OR_RCT>
-        <l3d:PI_MIN_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MIN_AGING_VAL/text()}</l3d:PI_MIN_AGING_VAL>
+        <l3d:PI_AGING_COUNT>{$body/l3d:InputParameters/l3d:PI_AGING_COUNT/text()}</l3d:PI_AGING_COUNT>
         <l3d:PI_MIN_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MIN_AGING_VAL/text()}</l3d:PI_MIN_AGING_VAL>
         <l3d:PI_MAX_AGING_VAL>{$body/l3d:InputParameters/l3d:PI_MAX_AGING_VAL/text()}</l3d:PI_MAX_AGING_VAL>
 </l3d:InputParameters>]]></con2:xqueryText>

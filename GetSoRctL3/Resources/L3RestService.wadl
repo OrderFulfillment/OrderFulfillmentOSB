@@ -8,7 +8,7 @@
    </grammars>
    <resources>
       <resource path="/getsorctl3/{status}/{customerId}/{soOrRct}/{agingCount}/{minAgingValue}/{maxAgingValue}">
-         <method name="GET" soa:wsdlOperation="L3Operation1">
+         <method name="GET" soa:wsdlOperation="L3Operation">
             <request>
                <param name="status" style="template" soa:expression="$msg.request/db:PI_STATUS" default="" type="xsd:string"/>
                <param name="customerId" style="template" soa:expression="$msg.request/db:PI_CUSTOMER_ID" default="" type="xsd:string"/>
