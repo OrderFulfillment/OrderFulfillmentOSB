@@ -12,6 +12,7 @@
     <modules>
         <module>System</module>
         <module>GetCarrierRTS</module>
+        <module>GetCustomerDetRTS</module>
     </modules>
 
 </project>
