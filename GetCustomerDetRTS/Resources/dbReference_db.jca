@@ -1,6 +1,6 @@
 <adapter-config name="dbReference" adapter="db" wsdlLocation="dbReference.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
   
-  <connection-factory UIConnectionName="Connection1" location="eis/DB/Connection1"/>
+  <connection-factory UIConnectionName="Connection1" location="eis/DB/OracleEBSDS"/>
   <endpoint-interaction portType="dbReference_ptt" operation="dbReference">
     <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
       <property name="SchemaName" value="APPS"/>
