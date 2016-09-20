@@ -27,7 +27,9 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="GetCarrierDetNS/GetCarrierDetNS.jpr"/></hash>
       <hash><url n="URL" path="GetCarrierRTS/GetCarrierRTS.jpr"/></hash>
+      <hash><url n="URL" path="GetCustomerDetNS/GetCustomerDetNS.jpr"/></hash>
       <hash><url n="URL" path="GetCustomerDetRTS/GetCustomerDetRTS.jpr"/></hash>
       <hash><url n="URL" path="GetCustomersRTS/GetCustomersRTS.jpr"/></hash>
       <hash><url n="URL" path="GetSoRctDetailsL1/GetSoRctDetailsL1.jpr"/></hash>

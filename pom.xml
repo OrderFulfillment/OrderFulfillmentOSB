@@ -13,6 +13,8 @@
         <module>System</module>
         <module>GetCarrierRTS</module>
         <module>GetCustomerDetRTS</module>
+        <module>GetCustomerDetNS</module>
+        <module>GetCarrierDetNS</module>
     </modules>
 
 </project>
