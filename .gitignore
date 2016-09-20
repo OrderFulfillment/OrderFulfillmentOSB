@@ -1,5 +1,9 @@
 */deploy
+
 *.class
+
 */classes
-*/.data
+
+*/.data/*
+
 */deploy/*
