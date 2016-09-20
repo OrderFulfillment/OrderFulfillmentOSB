@@ -22,7 +22,7 @@
                     <con1:route>
                         <con2:id>_ActionId-a087d06.7485a583.0.157427a67d9.N8000</con2:id>
                         <con1:service ref="GetCustomersRTS/dbReference" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
-                        <con1:operation passThrough="true"/>
+                        <con1:operation>dbReference</con1:operation>
                         <con1:outboundTransform>
                             <con3:replace varName="body" contents-only="true" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
                                 <con2:id>_ActionId-a087d06.655a7fe9.0.15742cda03c.N7ffa</con2:id>
