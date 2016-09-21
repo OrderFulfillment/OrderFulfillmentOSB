@@ -32,6 +32,7 @@
       <hash><url n="URL" path="GetCustomerDetNS/GetCustomerDetNS.jpr"/></hash>
       <hash><url n="URL" path="GetCustomerDetRTS/GetCustomerDetRTS.jpr"/></hash>
       <hash><url n="URL" path="GetCustomersRTS/GetCustomersRTS.jpr"/></hash>
+      <hash><url n="URL" path="GetSearchScreen/GetSearchScreen.jpr"/></hash>
       <hash><url n="URL" path="GetSoRctDetailsL1/GetSoRctDetailsL1.jpr"/></hash>
       <hash><url n="URL" path="GetSoRctL2/GetSoRctL2.jpr"/></hash>
       <hash><url n="URL" path="GetSoRctL3/GetSoRctL3.jpr"/></hash>
@@ -54,6 +55,6 @@
       </hash>
    </hash>
    <hash n="oracle.sb.tooling.ide.core.internal.application.SbApplication">
-      <value n="configContextSessionName" v="OSB-IDE_build_1474475081130"/>
+      <value n="configContextSessionName" v="OSB-IDE_build_1474481392419"/>
    </hash>
 </jws:workspace>

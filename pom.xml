@@ -15,6 +15,7 @@
         <module>GetCustomerDetRTS</module>
         <module>GetCustomerDetNS</module>
         <module>GetCarrierDetNS</module>
+        <module>GetSearchScreen</module>
     </modules>
 
 </project>

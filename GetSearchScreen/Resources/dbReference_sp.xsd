@@ -1,0 +1,46 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/dbReference" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/dbReference" elementFormDefault="qualified">
+   <element name="InputParameters">
+      <complexType>
+         <sequence>
+            <element name="PV_ITEM_NUM" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="PV_ORDER_NO" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="PV_RECEIPT_NUM" type="string" db:index="3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <element name="OutputParameters">
+      <complexType>
+         <sequence>
+            <element name="PC_SEARCH_DETAILS" type="db:APPS.XXMAF_SER_COUNT_TBL" db:index="4" db:type="Array" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <complexType name="APPS.XXMAF_SER_COUNT_REC">
+      <sequence>
+         <element name="ITEM_NUMBER" type="db:string9000" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SSD" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CARRIER" type="db:string400" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="WAREHOUSE" type="db:string400" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.XXMAF_SER_COUNT_TBL">
+      <sequence>
+         <element name="PC_SEARCH_DETAILS_ITEM" type="db:APPS.XXMAF_SER_COUNT_REC" db:type="Struct" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      </sequence>
+   </complexType>
+   <simpleType name="string9000">
+      <restriction base="string">
+         <maxLength value="9000"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string300">
+      <restriction base="string">
+         <maxLength value="300"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string400">
+      <restriction base="string">
+         <maxLength value="400"/>
+      </restriction>
+   </simpleType>
+</schema>
