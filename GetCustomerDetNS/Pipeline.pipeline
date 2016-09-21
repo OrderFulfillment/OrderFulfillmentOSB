@@ -2,10 +2,10 @@
 <con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
     <con:coreEntry>
         <con:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType">
-            <con:wsdl ref="GetCarrierRTS/Resources/GetCarrierRTSRestService"/>
+            <con:wsdl ref="GetCustomerDetNS/Resources/getcustdetnsRestService"/>
             <con:binding>
-                <con:name>GetCarrierRTSRestService_ptt-binding</con:name>
-                <con:namespace>http://xmlns.oracle.com/OrderFulfillmentOSB/GetCarrierRTS/GetCarrierRTSRestService</con:namespace>
+                <con:name>getcustdetnsRestService_ptt-binding</con:name>
+                <con:namespace>http://xmlns.oracle.com/OrderFulfillmentOSB/GetCustomerDetNS/getcustdetnsRestService</con:namespace>
             </con:binding>
         </con:binding>
         <con:xqConfiguration>
@@ -20,15 +20,15 @@
                 </con:context>
                 <con:actions>
                     <con1:route>
-                        <con2:id>_ActionId-a0ee36f.f9f988d.0.15746ab3fc9.N7ff5</con2:id>
-                        <con1:service ref="GetCarrierRTS/dbReference" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con2:id>_ActionId-a1d42ff.N4edb3fe4.0.15749168d5c.N7ffd</con2:id>
+                        <con1:service ref="GetCustomerDetNS/dbReference" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
                         <con1:operation>dbReference</con1:operation>
                         <con1:outboundTransform>
-                            <con3:replace varName="body" contents-only="true" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
-                                <con2:id>_ActionId-a0ee36f.f9f988d.0.15746ab3fc9.N7ff2</con2:id>
+                            <con3:replace contents-only="true" varName="body" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
+                                <con2:id>_ActionId-a1d42ff.N4edb3fe4.0.15749168d5c.N7ffa</con2:id>
                                 <con3:expr>
                                     <con2:xqueryText>&lt;dbr:InputParameters>
-  &lt;dbr:PD_CUST_DATE>{$body/dbr:InputParameters/dbr:PD_CUST_DATE/text()}&lt;/dbr:PD_CUST_DATE>
+  &lt;dbr:PIN_CUSTOMER_ID>{$body/dbr:InputParameters/dbr:PIN_CUSTOMER_ID/text()}&lt;/dbr:PIN_CUSTOMER_ID>
 &lt;/dbr:InputParameters></con2:xqueryText>
                                 </con3:expr>
                             </con3:replace>

@@ -11,10 +11,6 @@
 
     <modules>
         <module>System</module>
-        <module>GetCarrierRTS</module>
-        <module>GetCustomerNS</module>
-        <module>GetCarrierNS</module>
-        <module>GetCarrierDetRTS</module>
     </modules>
 
 </project>
