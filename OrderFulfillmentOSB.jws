@@ -27,23 +27,32 @@
     <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
   </list>
   <list n="listOfChildren">
-  
+    <hash>
+      <url n="URL" path="GetCustomerDetNS/GetCustomerDetNS.jpr"/>
+    </hash>
     <hash>
       <url n="URL" path="GetCarrierRTS/GetCarrierRTS.jpr"/>
     </hash>
-    <hash><url n="URL" path="GetCarrierDetRTS/GetCarrierDetRTS.jpr"/></hash>
-      <hash><url n="URL" path="GetCarrierDetNS/GetCarrierDetNS.jpr"/></hash>
- 
-      <hash><url n="URL" path="GetCustomerDetNS/GetCustomerDetNS.jpr"/></hash>
-      <hash>
+    <hash>
+      <url n="URL" path="GetCarrierDetRTS/GetCarrierDetRTS.jpr"/>
+    </hash>
+    <hash>
       <url n="URL" path="GetCustomerDetRTS/GetCustomerDetRTS.jpr"/>
     </hash>
- <hash><url n="URL" path="GetCarrierNS/GetCarrierNS.jpr"/></hash>
- <hash><url n="URL" path="GetCustomerNS/GetCustomerNS.jpr"/></hash>
-      <hash><url n="URL" path="GetCustomersRTS/GetCustomersRTS.jpr"/></hash>
-      <hash>
+    <hash>
+      <url n="URL" path="GetCarrierNS/GetCarrierNS.jpr"/>
+    </hash>
+    <hash>
+      <url n="URL" path="GetCustomerNS/GetCustomerNS.jpr"/>
+    </hash>
+    <hash>
+      <url n="URL" path="GetCustomersRTS/GetCustomersRTS.jpr"/>
+    </hash>
+     <hash><url n="URL" path="GetSearchScreen/GetSearchScreen.jpr"/></hash>
+    <hash>
       <url n="URL" path="GetSoRctDetailsL1/GetSoRctDetailsL1.jpr"/>
     </hash>
+     <hash><url n="URL" path="GetCarrierDetNS/GetCarrierDetNS.jpr"/></hash>
     <hash>
       <url n="URL" path="GetSoRctL2/GetSoRctL2.jpr"/>
     </hash>
@@ -71,6 +80,6 @@
     </hash>
   </hash>
   <hash n="oracle.sb.tooling.ide.core.internal.application.SbApplication">
-    <value n="configContextSessionName" v="OSB-IDE_build_1474376771262"/>
+    <value n="configContextSessionName" v="OSB-IDE_build_1474481392419"/>
   </hash>
 </jws:workspace>
