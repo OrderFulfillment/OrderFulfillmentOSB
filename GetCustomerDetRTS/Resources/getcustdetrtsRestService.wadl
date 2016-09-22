@@ -7,7 +7,7 @@
         </xsd:schema>
    </grammars>
    <resources>
-      <resource path="/getCustDetRTS/{number}">
+      <resource path="/getdet/{number}">
          <method name="GET" soa:wsdlOperation="Operation1">
             <request>
                <param name="number" style="template" soa:expression="$msg.request/db:PIN_CUSTOMER_ID" default="" type="xsd:string"/>
