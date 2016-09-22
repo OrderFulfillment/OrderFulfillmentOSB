@@ -7,7 +7,7 @@
         </xsd:schema>
    </grammars>
    <resources>
-      <resource path="/getSearchDets/{item}/{order}/{receipt}">
+      <resource path="/getdet/{item}/{order}/{receipt}">
          <method name="GET" soa:wsdlOperation="Operation1">
             <request>
                <param name="item" style="template" soa:expression="$msg.request/db:PV_ITEM_NUM" default="" type="xsd:string"/>
