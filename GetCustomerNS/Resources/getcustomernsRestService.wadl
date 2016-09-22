@@ -7,7 +7,7 @@
         </xsd:schema>
    </grammars>
    <resources>
-      <resource path="/getcustomerns/{date}">
+      <resource path="/getcount/{date}">
          <method name="GET" soa:wsdlOperation="Operation1">
             <request>
                <param name="date" style="template" soa:expression="$msg.request/db:PD_CUST_DATE" default="" type="xsd:string"/>
