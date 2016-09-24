@@ -21,6 +21,7 @@
          <element name="SSD" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
          <element name="CARRIER" type="db:string400" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
          <element name="WAREHOUSE" type="db:string400" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="HEADER_DETAILS" type="db:string500" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
       </sequence>
    </complexType>
    <complexType name="APPS.XXMAF_SER_COUNT_TBL">
@@ -41,6 +42,11 @@
    <simpleType name="string400">
       <restriction base="string">
          <maxLength value="400"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string500">
+      <restriction base="string">
+         <maxLength value="500"/>
       </restriction>
    </simpleType>
 </schema>
